@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Qualivue — Software Testing Services</title>
+  <meta name="description" content="Qualivue helps engineering teams ship with confidence through manual and automated testing, CI/CD integration, performance and security testing." />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="theme-color" content="#0f172a" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Qualivue — Software Testing Services" />
+  <meta property="og:description" content="Manual & automated testing, CI/CD integration, performance and security testing." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://qualivue.in" />
+  <meta property="og:image" content="https://qualivue.in/og-image.jpg" />
+
+  <style>
+    :root{
+      --bg:#0b1020;
+      --bg-soft:#0f172a;
+      --card:#101728;
+      --text:#e5e7eb;
+      --muted:#94a3b8;
+      --primary:#6ee7b7;
+      --primary-ink:#083b2b;
+      --ring:#334155;
+      --white:#ffffff;
+      --shadow: 0 10px 30px rgba(2,6,23,.35);
+      --max: 1120px;
+      --radius: 14px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg,var(--bg),#0a0f1d 55%, #0a0f1d);color:var(--text);font:16px/1.5 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue","Arial","Apple Color Emoji","Segoe UI Emoji"}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:100%;max-width:var(--max);margin:0 auto;padding:0 20px}
+    .btn{display:inline-flex;align-items:center;gap:.6rem;background:var(--primary);color:#0a0f1d;padding:.85rem 1.1rem;border-radius:12px;font-weight:700;box-shadow:var(--shadow);border:2px solid transparent;transition:transform .08s ease, box-shadow .2s ease}
+    .btn:hover{transform:translateY(-1px);box-shadow:0 12px 34px rgba(16,185,129,.35)}
+    .btn.outline{background:transparent;color:var(--text);border-color:var(--ring)}
+    .tag{display:inline-block;padding:.3rem .6rem;border:1px solid #22304b;border-radius:999px;color:var(--muted);font-size:.85rem;background:rgba(148,163,184,.08)}
+    header{position:sticky;top:0;background:rgba(10,15,29,.7);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid #1f2937;z-index:50}
+    .nav{display:flex;justify-content:space-between;align-items:center;height:64px}
+    .logo{display:flex;align-items:center;gap:.6rem;font-weight:800}
+    .logo-mark{width:28px;height:28px;border-radius:8px;background:conic-gradient(from 180deg at 50% 50%, #22d3ee, #a78bfa, #34d399);box-shadow:inset 0 0 20px rgba(255,255,255,.2)}
+    nav ul{display:flex;gap:1.2rem;list-style:none;margin:0;padding:0}
+    .menu-btn{display:none}
+    @media (max-width: 860px){
+      nav ul{display:none}
+      .menu-btn{display:inline-flex}
+      #mobileMenu{display:none}
+      #mobileMenu.open{display:block}
+    }
+
+    .hero{padding:72px 0 36px}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center}
+    @media (max-width: 900px){.hero-grid{grid-template-columns:1fr}}
+    .hero-card{background: radial-gradient(1200px 600px at 10% 0%, rgba(52,211,153,.12), transparent 40%),
+               radial-gradient(900px 600px at 80% 20%, rgba(56,189,248,.12), transparent 45%),
+               linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.00));
+               border:1px solid #24314e;border-radius:var(--radius);padding:32px}
+    h1{font-size: clamp(2rem, 5vw, 3.2rem);line-height:1.1;margin:.2rem 0 1rem}
+    h2{font-size: clamp(1.4rem, 3.5vw, 2rem);margin:0 0 .75rem}
+    p.lead{font-size: clamp(1rem, 2.5vw, 1.2rem);color:var(--muted)}
+    .hero-cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.2rem}
+    .mini{display:flex;gap:1rem;align-items:center;margin-top:1.2rem;color:var(--muted);font-size:.9rem}
+    .mini img{width:32px;height:32px;border-radius:50%;opacity:.9}
+
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    @media (max-width: 980px){.cards{grid-template-columns:1fr 1fr}}
+    @media (max-width: 640px){.cards{grid-template-columns:1fr}}
+    .card{background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00));border:1px solid #22304b;border-radius:16px;padding:20px}
+    .card h3{margin:.2rem 0 .4rem;font-size:1.15rem}
+    .kpi{display:flex;gap:12px;align-items:center}
+    .kpi strong{font-size:1.6rem}
+
+    .section{padding:56px 0}
+    .section .header{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:18px;flex-wrap:wrap}
+    .muted{color:var(--muted)}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    @media (max-width: 900px){.grid-2{grid-template-columns:1fr}}
+
+    .process{counter-reset: step}
+    .step{display:flex;gap:14px;align-items:flex-start}
+    .step .num{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:#16243f;border:1px solid #22304b;color:var(--primary);font-weight:800}
+    .step:not(:last-child){margin-bottom:14px}
+
+    .logos{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;align-items:center}
+    .logo-tile{height:48px;border:1px dashed #22304b;border-radius:12px;display:grid;place-items:center;color:var(--muted);font-size:.95rem}
+    @media (max-width: 900px){.logos{grid-template-columns:repeat(3,1fr)}}
+
+    .testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    @media (max-width: 980px){.testimonials{grid-template-columns:1fr 1fr}}
+    @media (max-width: 640px){.testimonials{grid-template-columns:1fr}}
+    blockquote{margin:0;background:#0d1529;border:1px solid #22304b;border-radius:16px;padding:18px}
+    blockquote footer{margin-top:10px;color:var(--muted);font-size:.9rem}
+
+    form{display:grid;gap:12px}
+    input, textarea, select{width:100%;padding:12px 14px;border-radius:12px;background:#0a1226;border:1px solid #1f2b47;color:var(--text)}
+    input:focus, textarea:focus, select:focus{outline:2px solid var(--ring);border-color:var(--ring)}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media (max-width: 640px){.form-row{grid-template-columns:1fr}}
+    .notice{font-size:.9rem;color:var(--muted)}
+    .success{display:none;margin-top:8px;color:#22c55e}
+    .error{display:none;margin-top:8px;color:#ef4444}
+
+    footer{padding:36px 0;border-top:1px solid #1f2937;color:var(--muted)}
+
+    /* Subtle section dividers */
+    .divider{height:1px;background:linear-gradient(90deg, transparent, #22304b, transparent);margin:24px 0}
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ProfessionalService",
+    "name":"Qualivue",
+    "url":"https://qualivue.in",
+    "description":"Manual & automated testing, CI/CD integration, performance and security testing.",
+    "areaServed":"Global",
+    "logo":"https://qualivue.in/logo.png",
+    "sameAs": ["https://www.linkedin.com/"],
+    "founder": "Akhil",
+    "serviceType": ["Software Testing","QA Automation","Performance Testing","Security Testing"]
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="logo" href="#top" aria-label="Qualivue home">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <span>Qualivue</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#work">Results</a></li>
+          <li><a href="#contact" class="btn outline">Get a Quote</a></li>
+        </ul>
+      </nav>
+      <button class="btn outline menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu">Menu</button>
+    </div>
+    <div id="mobileMenu" class="container">
+      <nav aria-label="Mobile">
+        <ul style="list-style:none;padding:12px 0;margin:0;display:grid;gap:8px">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#work">Results</a></li>
+          <li><a class="btn" href="#contact">Get a Quote</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-card">
+          <span class="tag">QA, but faster. ⚡</span>
+          <h1>Ship with confidence.<br />We break it before your users do.</h1>
+          <p class="lead">End-to-end software testing for startups and product teams: manual, automated, and performance testing integrated into your CI/CD. Typical clients cut release bugs by <strong>70%+</strong> in the first quarter.</p>
+          <div class="hero-cta">
+            <a class="btn" href="#contact">Get a 30-min consult</a>
+            <a class="btn outline" href="#services">See services</a>
+          </div>
+          <div class="mini">
+            <img src="https://dummyimage.com/64x64/1e293b/ffffff&text=QA" alt="" loading="lazy" />
+            <span>IST timezone • Works globally • Flexible engagement (project or retainer)</span>
+          </div>
+        </div>
+        <div class="card" aria-label="Key outcomes">
+          <div class="kpi"><strong>95%</strong> <span class="muted">test case coverage on critical paths</span></div>
+          <div class="divider"></div>
+          <div class="kpi"><strong>70%↓</strong> <span class="muted">production defects after 1 quarter</span></div>
+          <div class="divider"></div>
+          <div class="kpi"><strong>&lt;10 min</strong> <span class="muted">to run PR smoke suite</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section">
+      <div class="header">
+        <h2>Services</h2>
+        <p class="muted">Pick what you need, or bundle for best value.</p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <h3>Manual Testing</h3>
+          <p class="muted">Functional, regression, exploratory, cross-browser/device. Test case design, traceability, and reporting.</p>
+          <ul class="muted">
+            <li>Test plans &amp; suites</li>
+            <li>Release/PR validation</li>
+            <li>Bug triage &amp; reproduction</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Automation</h3>
+          <p class="muted">Robust E2E, API, and component tests with CI integration. Flake-resistant by design.</p>
+          <ul class="muted">
+            <li>Cypress/Playwright/Selenium</li>
+            <li>REST/GraphQL API testing</li>
+            <li>CI/CD &amp; reporting (Allure)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Performance &amp; Security</h3>
+          <p class="muted">Load &amp; stress testing with actionable bottleneck analysis plus security checks.</p>
+          <ul class="muted">
+            <li>k6/JMeter; Core Web Vitals</li>
+            <li>OWASP top-10 checks</li>
+            <li>Baseline &amp; remediation plan</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="section">
+      <div class="grid-2">
+        <div>
+          <h2>How we work</h2>
+          <p class="muted">Lightweight process that plugs into your workflow. Expect fast communication and crisp artifacts.</p>
+          <div class="process">
+            <div class="step">
+              <div class="num">1</div>
+              <div><strong>Scope</strong><br><span class="muted">Free consult to map goals, risks, and environments.</span></div>
+            </div>
+            <div class="step">
+              <div class="num">2</div>
+              <div><strong>Plan</strong><br><span class="muted">Test strategy, tools, and timelines tailored to your stack.</span></div>
+            </div>
+            <div class="step">
+              <div class="num">3</div>
+              <div><strong>Execute</strong><br><span class="muted">Iterative cycles with clear reports and demos.</span></div>
+            </div>
+            <div class="step">
+              <div class="num">4</div>
+              <div><strong>Automate</strong><br><span class="muted">Stabilize CI suites and hand off with documentation.</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Pricing (guide)</h3>
+          <p class="muted">Transparent starting points—final quote after discovery.</p>
+          <ul class="muted">
+            <li><strong>Starter Audit:</strong> ₹25k — 1–2 weeks, risk &amp; gaps report</li>
+            <li><strong>Sprint Pack:</strong> ₹80k — 4 weeks, manual + smoke automation</li>
+            <li><strong>Automation Retainer:</strong> from ₹1.5L/mo — CI-integrated E2E &amp; API</li>
+          </ul>
+          <a class="btn" href="#contact" aria-label="Request a detailed quote">Request detailed quote</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTS / SOCIAL PROOF -->
+    <section id="work" class="section">
+      <div class="header">
+        <h2>Results</h2>
+        <p class="muted">Outcomes clients care about.</p>
+      </div>
+      <div class="testimonials">
+        <blockquote>
+          “They cut our hotfixes from weekly to monthly and gave us a stable PR smoke suite.”
+          <footer>— Product Lead, SaaS (fintech)</footer>
+        </blockquote>
+        <blockquote>
+          “Performance test found a queuing bug we missed for months. Fix shaved 40% off p95.”
+          <footer>— Engineering Manager, Marketplace</footer>
+        </blockquote>
+        <blockquote>
+          “Setup Playwright with fixtures and parallel runs. Flake rate is near zero.”
+          <footer>— CTO, Healthtech</footer>
+        </blockquote>
+      </div>
+      <div class="divider"></div>
+      <div class="logos" aria-label="Tech we test">
+        <div class="logo-tile">React</div>
+        <div class="logo-tile">Next.js</div>
+        <div class="logo-tile">Node</div>
+        <div class="logo-tile">Django</div>
+        <div class="logo-tile">Rails</div>
+        <div class="logo-tile">Flutter</div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="grid-2">
+        <div>
+          <h2>Get a quote</h2>
+          <p class="muted">Tell us about your app and timeline. We’ll respond within one business day.</p>
+          <form id="contactForm" method="POST" action="https://formspree.io/f/your-endpoint">
+            <!-- Replace the action with your form handler (Formspree/Netlify/email API) -->
+            <div class="form-row">
+              <div>
+                <label for="name">Name</label>
+                <input id="name" name="name" autocomplete="name" required />
+              </div>
+              <div>
+                <label for="email">Work email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div>
+                <label for="company">Company</label>
+                <input id="company" name="company" autocomplete="organization" />
+              </div>
+              <div>
+                <label for="size">Team size</label>
+                <select id="size" name="size">
+                  <option value="">Select…</option>
+                  <option>1–5</option>
+                  <option>6–15</option>
+                  <option>16–50</option>
+                  <option>51–200</option>
+                  <option>200+</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label for="message">Project details</label>
+              <textarea id="message" name="message" rows="5" placeholder="Stack, environments, deadlines, problem areas…" required></textarea>
+            </div>
+            <input type="hidden" name="_subject" value="New lead from Qualivue" />
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+            <button class="btn" type="submit">Send request</button>
+            <div class="success" id="okMsg">Thanks! We’ll be in touch shortly.</div>
+            <div class="error" id="errMsg">Hmm, something went wrong. Please email hello@qualivue.in.</div>
+            <p class="notice">By submitting, you agree to our terms. We’ll only use your info to respond.</p>
+          </form>
+        </div>
+        <div class="card">
+          <h3>Contact</h3>
+          <p class="muted">Prefer email? <a href="mailto:hello@qualivue.in">hello@qualivue.in</a></p>
+          <p class="muted">India (IST) • Remote-first • Available UTC±5.5</p>
+          <div class="divider"></div>
+          <h3>Why us</h3>
+          <ul class="muted">
+            <li>Developer-friendly artifacts</li>
+            <li>Repeatable, maintainable suites</li>
+            <li>Clear reporting &amp; SLAs</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px">
+      <span>© <span id="year"></span> Qualivue</span>
+      <span><a href="#top">Back to top ↑</a></span>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    btn?.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id=a.getAttribute('href').slice(1);
+        const el=document.getElementById(id);
+        if(el){ e.preventDefault(); el.scrollIntoView({behavior:"smooth", block:"start"}); }
+        if(menu.classList.contains('open')){ menu.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
+      });
+    });
+
+    // Year + simple form UX (works with Formspree/Netlify)
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const form = document.getElementById('contactForm');
+    form?.addEventListener('submit', async (e)=>{
+      if(form.action.includes('formspree.io')){
+        e.preventDefault();
+        const ok = document.getElementById('okMsg');
+        const err = document.getElementById('errMsg');
+        ok.style.display = 'none'; err.style.display = 'none';
+        try{
+          const res = await fetch(form.action, { method:'POST', body: new FormData(form), headers: { 'Accept':'application/json' }});
+          if(res.ok){ ok.style.display = 'block'; form.reset(); }
+          else { err.style.display = 'block'; }
+        }catch{ err.style.display = 'block'; }
+      }
+    });
+  </script>
+</body>
+</html>
