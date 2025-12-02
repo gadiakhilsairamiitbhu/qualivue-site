@@ -1784,9 +1784,12 @@
 
           <div class="bg-[#0b1437] p-6 rounded-2xl">
               
-  <form class="space-y-5" action="https://formspree.io/f/mrbnkopn" method="POST">
-
-
+  <form
+  id="contact-form"
+  class="space-y-5"
+  action="https://formspree.io/f/mrbnkopn"
+  method="POST"
+>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
     <input
       type="text"
@@ -1830,7 +1833,11 @@
   ></textarea>
 
   <!-- Optional: better email subject in your inbox -->
-  <input type="hidden" name="_subject" value="New enquiry from Qualivue website" />
+  <input
+    type="hidden"
+    name="_subject"
+    value="New enquiry from Qualivue website"
+  />
 
   <button
     type="submit"
@@ -1838,7 +1845,11 @@
   >
     Submit
   </button>
+
+  <!-- Status message (same page, no redirect) -->
+  <p id="form-status" class="text-sm mt-2 min-h-[1.25rem]"></p>
 </form>
+
 
           </div>
         </div>
@@ -2043,6 +2054,42 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ once: true });
+    
+        // Contact form – submit via AJAX to Formspree (no redirect)
+    const contactForm = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+
+    if (contactForm && formStatus) {
+      contactForm.addEventListener('submit', async (event) => {
+        event.preventDefault(); // stop normal submit + redirect
+
+        formStatus.textContent = 'Sending...';
+        formStatus.className = 'text-sm mt-2 text-slate-300 min-h-[1.25rem]';
+
+        const data = new FormData(contactForm);
+
+        try {
+          const response = await fetch(contactForm.action, {
+            method: contactForm.method,
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (response.ok) {
+            formStatus.textContent = "Thank you! We'll get back to you within 1 business day.";
+            formStatus.className = 'text-sm mt-2 text-emerald-400 min-h-[1.25rem]';
+            contactForm.reset();
+          } else {
+            formStatus.textContent = "Something went wrong. Please try again or email us at contact@qualivue.in.";
+            formStatus.className = 'text-sm mt-2 text-rose-400 min-h-[1.25rem]';
+          }
+        } catch (error) {
+          formStatus.textContent = "Network error. Please check your connection or reach us at contact@qualivue.in.";
+          formStatus.className = 'text-sm mt-2 text-rose-400 min-h-[1.25rem]';
+        }
+      });
+    }
+
 
     // Year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
