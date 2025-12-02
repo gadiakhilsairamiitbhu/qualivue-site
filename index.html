@@ -10,6 +10,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Qualivue — QA & Software Testing Services</title>
 
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+
   <!-- Tailwind for blog / case-studies / contact layouts -->
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -1843,27 +1845,27 @@
           </div>
 
           <!-- Book a quick call -->
-                    <div class="bg-[#0b1437] p-6 rounded-2xl">
-            <div class="flex items-center gap-4">
-              <div class="bg-pink-600 p-3 rounded-xl">📅</div>
-              <div class="flex-1">
-                <h3 class="font-semibold text-lg">Book a quick call</h3>
-                <p class="text-gray-400 text-sm">
-                  Fastest way to get timelines, pricing &amp; roadmap.
-                </p>
-              </div>
-              <button
-                type="button"
-                class="bg-pink-600 hover:bg-pink-700 px-4 py-2 rounded-lg text-sm font-semibold"
-                onclick="document.querySelector('#contact form')?.scrollIntoView({behavior:'smooth'});"
-              >
-                Book Now
-              </button>
-            </div>
-          </div>
-        </div> <!-- end right column -->
-      </div> <!-- end contact grid -->
-    </section> <!-- end contact -->
+<div class="bg-[#0b1437] p-6 rounded-2xl">
+  <div class="flex items-center gap-4">
+    <div class="bg-pink-600 p-3 rounded-xl">📅</div>
+    <div class="flex-1">
+      <h3 class="font-semibold text-lg">Book a quick call</h3>
+      <p class="text-gray-400 text-sm">
+        Fastest way to get timelines, pricing &amp; roadmap.
+      </p>
+      <p class="text-[11px] text-gray-500 mt-1">
+        Opens a Calendly scheduler in a popup.
+      </p>
+    </div>
+    <button
+      type="button"
+      class="bg-pink-600 hover:bg-pink-700 px-4 py-2 rounded-lg text-sm font-semibold"
+      onclick="Calendly.initPopupWidget({ url: 'https://calendly.com/YOUR-CALENDLY-LINK' }); return false;"
+    >
+      Book Now
+    </button>
+  </div>
+</div>
 
     <!-- ================= CAREERS ================= -->
 <section id="careers" class="relative text-white pt-6 pb-16 px-6 bg-gradient-to-b from-[#060c2a] to-[#050B26]">
@@ -2072,5 +2074,8 @@
       });
     });
   </script>
+  <!-- Calendly widget script -->
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  
 </body>
 </html>
