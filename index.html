@@ -1844,8 +1844,8 @@
             </ul>
           </div>
 
-          <!-- Book a quick call -->
-<div class="bg-[#0b1437] p-6 rounded-2xl">
+        <!-- Book a quick call -->
+<div class="bg-[#0b1437] p-6 rounded-2xl shadow-md">
   <div class="flex items-center gap-4">
     <div class="bg-pink-600 p-3 rounded-xl">📅</div>
     <div class="flex-1">
@@ -1859,14 +1859,16 @@
     </div>
     <button
       type="button"
-      class="bg-pink-600 hover:bg-pink-700 px-4 py-2 rounded-lg text-sm font-semibold"
-onclick="Calendly.initPopupWidget({
-  url: 'https://calendly.com/contact-qualivue-dm4z/30min?background_color=050B26&text_color=FFFFFF&primary_color=6366f1'
+      class="bg-pink-600 hover:bg-pink-700 px-4 py-2 rounded-lg text-sm font-semibold transition-colors"
+      onclick="Calendly.initPopupWidget({
+        url: 'https://calendly.com/contact-qualivue-dm4z/30min?background_color=050B26&text_color=FFFFFF&primary_color=6366f1'
+      }); return false;"
     >
       Book Now
     </button>
   </div>
 </div>
+
 
     <!-- ================= CAREERS ================= -->
 <section id="careers" class="relative text-white pt-6 pb-16 px-6 bg-gradient-to-b from-[#060c2a] to-[#050B26]">
