@@ -1786,15 +1786,19 @@
 
         <!-- Right -->
         <div class="space-y-6" data-aos="fade-left">
-          <div class="bg-[#0b1437] p-6 rounded-2xl">
-            <div class="flex items-center gap-4">
-              <div class="bg-indigo-600 p-3 rounded-xl">💬</div>
-              <div>
-                <h3 class="font-semibold text-lg">Talk to a QA Expert</h3>
-                <p class="text-gray-400 text-sm">Get timelines, pricing &amp; roadmap before you start.</p>
-              </div>
-            </div>
-          </div>
+          <div
+  class="bg-[#0b1437] p-6 rounded-2xl cursor-pointer hover:bg-[#111b3f] transition"
+  onclick="document.querySelector('#contact form')?.scrollIntoView({behavior:'smooth'});"
+>
+  <div class="flex items-center gap-4">
+    <div class="bg-indigo-600 p-3 rounded-xl">💬</div>
+    <div>
+      <h3 class="font-semibold text-lg">Talk to a QA Expert</h3>
+      <p class="text-gray-400 text-sm">Get timelines, pricing &amp; roadmap before you start.</p>
+    </div>
+  </div>
+</div>
+
 
           <div class="bg-[#0b1437] p-6 rounded-2xl">
             <h3 class="font-semibold text-lg mb-3">Why Contact Us?</h3>
@@ -1813,9 +1817,14 @@
                 <h3 class="font-semibold text-lg">Book a quick call</h3>
                 <p class="text-gray-400 text-sm">Fastest way to get timelines, pricing &amp; roadmap.</p>
               </div>
-              <button class="bg-pink-600 hover:bg-pink-700 px-4 py-2 rounded-lg text-sm font-semibold">
-                Book Now
-              </button>
+              <button
+  type="button"
+  class="bg-pink-600 hover:bg-pink-700 px-4 py-2 rounded-lg text-sm font-semibold"
+  onclick="document.querySelector('#contact form')?.scrollIntoView({behavior:'smooth'});"
+>
+  Book Now
+</button>
+
             </div>
           </div>
         </div>
