@@ -1783,27 +1783,64 @@
           </div>
 
           <div class="bg-[#0b1437] p-6 rounded-2xl">
-            <form class="space-y-5">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <input type="text" class="w-full bg-[#0f1b44] rounded-xl px-4 py-3" placeholder="Your name">
-                <input type="email" class="w-full bg-[#0f1b44] rounded-xl px-4 py-3" placeholder="hello@company.com">
-              </div>
+            <form
+  class="space-y-5"
+  action="https://formspree.io/f/mrbnkopn"  <!-- replace with your real Formspree URL -->
+  method="POST"
+>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <input
+      type="text"
+      name="name"
+      class="w-full bg-[#0f1b44] rounded-xl px-4 py-3"
+      placeholder="Your name"
+      required
+    />
+    <input
+      type="email"
+      name="email"
+      class="w-full bg-[#0f1b44] rounded-xl px-4 py-3"
+      placeholder="hello@company.com"
+      required
+    />
+  </div>
 
-              <input type="text" class="w-full bg-[#0f1b44] rounded-xl px-4 py-3" placeholder="Company or product name (optional)">
+  <input
+    type="text"
+    name="company"
+    class="w-full bg-[#0f1b44] rounded-xl px-4 py-3"
+    placeholder="Company or product name (optional)"
+  />
 
-              <select class="w-full bg-[#0f1b44] rounded-xl px-4 py-3">
-                <option>General / Pricing</option>
-                <option>Automation Testing</option>
-                <option>Manual Testing</option>
-                <option>Performance Testing</option>
-              </select>
+  <select
+    name="interest"
+    class="w-full bg-[#0f1b44] rounded-xl px-4 py-3"
+  >
+    <option>General / Pricing</option>
+    <option>Automation Testing</option>
+    <option>Manual Testing</option>
+    <option>Performance Testing</option>
+  </select>
 
-              <textarea class="w-full bg-[#0f1b44] rounded-xl px-4 py-3" rows="4" placeholder="Tell us about your project"></textarea>
+  <textarea
+    name="message"
+    class="w-full bg-[#0f1b44] rounded-xl px-4 py-3"
+    rows="4"
+    placeholder="Tell us about your project"
+    required
+  ></textarea>
 
-              <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 px-6 py-3 rounded-xl font-semibold">
-                Submit
-              </button>
-            </form>
+  <!-- Optional: better email subject in your inbox -->
+  <input type="hidden" name="_subject" value="New enquiry from Qualivue website" />
+
+  <button
+    type="submit"
+    class="w-full bg-indigo-600 hover:bg-indigo-700 px-6 py-3 rounded-xl font-semibold"
+  >
+    Submit
+  </button>
+</form>
+
           </div>
         </div>
 
