@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://qualivue.in/sitemap.xml
